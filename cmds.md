@@ -19,7 +19,7 @@
 10. ~/kafka_2.13-3.0.0/bin/kafka-console-consumer.sh --topic Test1 --from-beginning --bootstrap-server localhost:9092
 
 # Steps to Set Up Kafka as a Systemd Service:
-1. sudo nano /etc/systemd/system/kafka.service
+1. sudo nano /etc/systemd/system/kafka.service 
    check kafka.service file
 2. sudo systemctl daemon-reload
 3. sudo systemctl enable kafka.service
