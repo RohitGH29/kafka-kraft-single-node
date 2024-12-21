@@ -1,0 +1,14 @@
+[Unit]
+Description=Apache Kafka
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+ExecStart=/home/ubuntu/kafka_2.13-3.0.0/bin/kafka-server-start.sh /home/ubuntu/kafka_2.13-3.0.0/config/kraft/server.properties
+ExecStop=/home/ubuntu/kafka_2.13-3.0.0/bin/kafka-server-stop.sh
+Restart=on-failure
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
